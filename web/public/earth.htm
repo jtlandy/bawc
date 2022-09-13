@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Miniature Earth | Flight Time Demo</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+
+    <link rel="stylesheet" href="assets/style.css">
+    <link rel="stylesheet" href="assets/fly-style.css">
+    <script src="assets/airports-and-plane-mesh.js"></script>
+    <script src="assets/miniature.earth.js"></script>
+
+
+    <script>
+
+      window.addEventListener("earthjsload", function () {
+        myearth = new Earth('myearth', {
+
+          location: {lat: 20, lng: 20},
+
+          light: 'none',
+
+          mapImage: 'assets/hologram-map.svg',
+          transparent: true,
+
+          autoRotate: true,
+          autoRotateSpeed: 1.2,
+          autoRotateDelay: 100,
+          autoRotateStart: 2000,
+        });
+
+
+        myearth.addEventListener("ready", function () {
+
+          // add airport pins from airports array in airports-and-plane-mesh.js
+
+          for (var i = 0; i < airports.length; i++) {
+
+            var marker = this.addMarker({
+
+              mesh: ["Pin"],
+              color: '#00a8ff',
+              offset: -0.5,
+              location: {lat: airports[i][2], lng: airports[i][3]},
+              scale: 0.01,
+              visible: false,
+              hotspot: true,
+              hotspotRadius: 0.4,
+              hotspotHeight: 1.5,
+
+              // custom properties
+              index: i,
+              infoname: airports[i][0],
+              infoprice: airports[i][1],
+
+
+            });
+
+
+            // pin events
+
+            marker.addEventListener('mouseover', function () {
+
+              document.getElementById('popup-container').style.opacity = 1;
+              document.getElementById('infoname').innerHTML = this.infoname;
+              document.getElementById('infoprice').innerHTML = this.infoprice;
+
+
+              this.color = 'red';
+
+            });
+
+            marker.addEventListener('mouseout', function () {
+
+              if (this != startMarker && this != endMarker) {
+                this.color = '#00a8ff';
+              }
+              document.getElementById('popup-container').style.opacity = 0;
+
+              document.getElementById('infoname').innerHTML = '';
+              document.getElementById('infoprice').innerHTML = '';
+
+            });
+
+            markers.push(marker);
+
+          }
+
+          restorePins();
+
+        });
+
+      });
+
+
+      var markers = [];
+
+      var flying = false;
+      var plane, X;
+      var startMarker, endMarker;
+      var dashedLine, solidLine;
+      var flightScale = 1;
+
+
+      var pinIndex = 0;
+      var pinTime = 0;
+      var pinsPerSec = 1000 / 18;
+
+      function restorePins() {
+
+        pinIndex = 0;
+        pinTime = myearth.deltaTime;
+
+        var restoreOnePin = function () {
+
+          pinTime += myearth.deltaTime;
+          if (pinTime > pinsPerSec) {
+            pinTime -= pinsPerSec;
+          } else {
+            return;
+          }
+
+          if (!markers[pinIndex].visible) {
+
+            markers[pinIndex].visible = true;
+            markers[pinIndex].hotspot = true;
+            markers[pinIndex].animate('scale', 1, {duration: 560, easing: 'out-back'});
+
+          } else {
+
+            // skip wait time
+            pinTime = pinsPerSec;
+
+          }
+
+          if (++pinIndex >= markers.length) {
+            myearth.removeEventListener("update", restoreOnePin);
+          }
+
+        };
+
+        myearth.addEventListener("update", restoreOnePin);
+
+      }
+
+    </script>
+
+</head>
+
+<body class="sidebar-open">
+
+<div id="wrapper">
+    <div id="main-col">
+
+        <div id="myearth" class="little-earth">
+            <div id="popup-container">
+                <div id="popup-body">
+                    <div id="popup-content">
+                        <div id="country-info">
+                            <strong id="infoname"></strong>
+                        </div>
+                        <div id="price-info">
+                            <strong id="infoprice"></strong>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div id="button-reset" onclick="reset();"></div>
+
+        </div>
+
+    </div><!--main-col-->
+
+
+</div><!--wrapper-->
+
+
+</body>
+</html>

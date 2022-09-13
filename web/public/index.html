@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- ICONS -->
+    <link rel="shortcut-icon" href="%PUBLIC_URL%/favicon.png" />
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+
+    <!-- FONT CSS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+<!--    <link href="https://unpkg.com/aos@next/dist/aos.css" rel="stylesheet" />-->
+    <script src="assets/js/libs/jsband-min.js" type="text/javascript"></script>
+    <script src="assets/js/pave-min.js" type="text/javascript"></script>
+    
+    <title>Bored Ape Watch Club - Play to Earn Platform</title>
+  </head>
+
+  <body>
+    <div id="root"></div>
+  </body>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" type="text/javascript"></script>
+<!--  <script src="https://unpkg.com/aos@next/dist/aos.js" type="text/javascript"></script>-->
+  <script>
+    const $backTop = $(".back-to-top");
+    const isHidden = "is-hidden";
+
+    $(window).on("scroll", function () {
+      const $this = $(this);
+      if ($this.scrollTop() + $this.height() == $(document).height()) {
+        $backTop.removeClass(isHidden);
+      } else {
+        $backTop.addClass(isHidden);
+      }
+    });
+
+    $backTop.on("click", () => {
+      $("html, body").animate({ scrollTop: 0 }, "slow");
+      return false;
+    });
+  </script>
+</html>

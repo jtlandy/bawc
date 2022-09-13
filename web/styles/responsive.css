@@ -1,0 +1,240 @@
+#brand {
+  padding-left: 11%;
+  padding-top: 1rem;
+  font-size: 26pt;
+  color: white !important;
+  font-size: 28pt;
+  font-weight: bold;
+  /* font-family: 'Rowdies', cursive; */
+  color: #406d8a !important;
+}
+
+.web3modal-modal-lightbox {
+  z-index: 9999 !important;
+}
+
+ul {
+  list-style: none;
+  /* Remove default bullets */
+}
+
+ul li::before {
+  content: "\2022";
+  /* Add content: \2022 is the CSS Code/unicode for a bullet */
+  color: #406d8a;
+  /* Change the color */
+  font-weight: bold;
+  /* If you want it to be bold */
+  display: inline-block;
+  /* Needed to add space between the bullet and the text */
+  width: 0.8em;
+  /* Also needed for space (tweak if needed) */
+  /*margin-left: -1em; /* Also needed for space (tweak if needed) */
+}
+
+.tophold-desc {
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 64px;
+  color: #5e636e;
+}
+
+.tophold-desc ul h2 {
+  color: #406d8a;
+  font-weight: bold;
+}
+
+.tophold {
+  padding-top: 75px;
+  height: 800px;
+  background-image: url("/resources/BAWC_Minting_Banner_BG.jpg");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.tophold2 {
+  background-image: url("/resources/BAWC_Minting_Page_Watch_Banner.png");
+  background-position: center center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: right;
+  height: 100%;
+  padding-right: 220px !important;
+  padding-top: 52px;
+}
+.modal-view {
+  margin-top: 100px!important;
+}
+
+@media(max-width: 1600px) {
+  .tophold {
+    height: 665px;
+  }
+
+  .tophold2 {
+    height: 100%;
+    padding-right: 70px !important;
+    padding-top: 75px;
+  }
+
+  .tophold-desc {
+    font-size: 20px;
+    line-height: 45px;
+  }
+
+  body .sec-title {
+    font-size: 35px;
+  }
+
+  .social-section p {
+    font-size: 18px;
+  }
+}
+
+@media(max-width: 991px) {
+  .tophold {
+    height: 665px;
+  }
+
+  .tophold2 {
+    height: 100%;
+    padding-right: 70px !important;
+    padding-top: 75px;
+  }
+
+  .tophold-desc {
+    font-size: 20px;
+    line-height: 45px;
+  }
+
+  body .sec-title {
+    font-size: 30px;
+  }
+
+  .social-section p {
+    font-size: 16px;
+  }
+
+  .nft-container {
+    padding-top: 15px;
+  }
+}
+
+@media(max-width: 850px) {
+  .tophold {
+    height: 550px;
+  }
+
+  .tophold2 {
+    height: 100%;
+    padding-right: 40px !important;
+    padding-top: 40px;
+  }
+
+  .tophold-desc {
+    font-size: 18px;
+    line-height: 40px;
+  }
+
+  body .sec-title {
+    font-size: 28px;
+  }
+
+  .social-section p {
+    font-size: 14px;
+  }
+
+  .nft-container {
+    padding-top: 15px;
+  }
+}
+
+@media(max-width: 685px) {
+  .tophold {
+    height: 450px;
+  }
+
+  .tophold2 {
+    height: 100%;
+    padding-right: 40px !important;
+    padding-top: 30px;
+  }
+
+  .tophold-desc {
+    font-size: 18px;
+    line-height: 30px;
+    color: silver;
+  }
+
+  .tophold-desc ul h2 {
+    font-size: 20px;
+  }
+
+  #brand {
+    font-size: 24pt;
+  }
+
+  body .sec-title {
+    font-size: 26px;
+  }
+
+  .social-section p {
+    font-size: 14px;
+  }
+
+  .nft-container {
+    padding-top: 15px;
+  }
+}
+
+@media(max-width: 525px) {
+  .tophold {
+    height: 400px;
+  }
+
+  .tophold2 {
+    height: 100%;
+    padding-right: 40px !important;
+    padding-top: 30px;
+  }
+
+  .tophold-desc {
+    font-size: 16px;
+    line-height: 20px;
+    color: silver;
+  }
+
+  .tophold-desc ul h2 {
+    font-size: 18px;
+  }
+
+  #brand {
+    font-size: 18pt;
+  }
+
+  body .sec-title {
+    font-size: 22px;
+  }
+
+  .social-section p {
+    font-size: 12px;
+  }
+
+  .nft-container {
+    padding-top: 15px;
+  }
+
+  .nft-container .header-box {
+    margin-top: 3px;
+    padding: 1px 1px 0px;
+  }
+
+  .contact-section {
+    margin-top: 0px;
+  }
+}
