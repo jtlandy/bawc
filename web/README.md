@@ -24,7 +24,10 @@ NEXT_PUBLIC_EMAIL=replace_smtp_email
 NEXT_PUBLIC_PASSWORD=replace_smtp_password
 ```
 
-3. You can run the app in the development mode.
+3. Run `yarn install` or `npm install`
+
+
+4. You can run the app in the development mode.
 
 Use one of following commands:
 
