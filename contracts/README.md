@@ -33,3 +33,9 @@ You will see following screen:
 
 <img width="718" alt="image" src="https://user-images.githubusercontent.com/21962762/200037995-076d2244-f2f6-4142-a9c9-d7ccf369296f.png">
 
+- Go to the compiler panel and click the cick the big blue button
+<img width="675" alt="image" src="https://user-images.githubusercontent.com/21962762/200038610-49eddfdf-a44c-472a-9e7d-dbe894117a63.png">
+
+You will see following screen:
+<img width="605" alt="image" src="https://user-images.githubusercontent.com/21962762/200038940-450c3bef-cd47-4191-b477-f1c4cd81d7fc.png">
+
