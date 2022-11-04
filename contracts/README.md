@@ -22,19 +22,14 @@ You will see following screen:
 
 <img width="889" alt="image" src="https://user-images.githubusercontent.com/21962762/200037173-9423401f-7063-4657-86c9-936abaa77179.png">
 
-npx eslint '**/*.{js,ts}'
-
 ### Compile the smart contract
 
 - Create a new file named as CryptoKiddes.sol in contracts directory
 
 <img width="409" alt="image" src="https://user-images.githubusercontent.com/21962762/200037698-a592e7b1-d1e0-4f5a-bf0e-07fa184d65d9.png">
 
-npx eslint '**/*.{js,ts}'
 
 - Copy the contract source code and paste it into the editor opened.
 
 <img width="718" alt="image" src="https://user-images.githubusercontent.com/21962762/200037995-076d2244-f2f6-4142-a9c9-d7ccf369296f.png">
-
-npx eslint '**/*.{js,ts}'
 
