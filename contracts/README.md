@@ -64,7 +64,15 @@ In order to deploy it on mainnet, your metamask should point to mainnet activate
 
 Then the contract will be deployed by interacting with metamask and deployment fee will be deducted from your wallet balance.
 
+You will see the deployed contract like below:
+
+<img width="581" alt="image" src="https://user-images.githubusercontent.com/21962762/200047439-974844d0-0112-4fe4-a0dd-284ca22c573a.png">
+
+- Cick `copy` button to copy the `contract address` deployed
+
+<img width="352" alt="image" src="https://user-images.githubusercontent.com/21962762/200047674-c261591d-0f3b-43cd-b867-7f92921a5573.png">
 
 
+## Save the contract address in your favorite way. it will be used in the web dapp later.
 
-
+# You will successfully get the contract address deployed according to the guidelines above!
