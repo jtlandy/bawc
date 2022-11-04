@@ -27,5 +27,7 @@ NEXT_PUBLIC_PASSWORD=replace_smtp_password
 3. You can run the app in the development mode.
 
 Use one of following commands:
+
 `npm start` or `yarn start`
+
 `npm run dev` or `yarn run dev`
