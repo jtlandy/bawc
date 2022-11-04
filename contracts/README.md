@@ -1,48 +1,40 @@
-# Advanced NFT contract based on ERC-721a, built on Hardhat framework.
+# Smart Contract for MINT token
 
-This project demonstrates an advanced Hardhat use case, integrating other tools commonly used alongside Hardhat in the ecosystem.
+MINT NFT is based on ERC-1155 and the tokens will be minted to users who hold BAYC or MAYC tokens and ordered a watch.
 
-Currently it purposes issuing ERC-721a based NFT bulk minting over the ethereum network for further benefits on PlayEstate metaverse ecosystem.
+## How to deploy the contract using remix
 
-The project comes with a sample contract, a test for that contract, a sample script that deploys that contract, and an example of a task implementation, which simply lists the available accounts. It also comes with a variety of other tools, preconfigured to work with the project code.
+You can use web based remix IDE to deploy the smart contract.
 
-Try running some of the following tasks:
+Reference: https://remix-ide.readthedocs.io/en/latest/create_deploy.html
 
-```shell
-npx hardhat accounts
-npx hardhat compile
-npx hardhat clean
-npx hardhat test
-npx hardhat node
-npx hardhat help
-REPORT_GAS=true npx hardhat test
-npx hardhat coverage
-npx hardhat run scripts/deploy.ts
-TS_NODE_FILES=true npx ts-node scripts/deploy.ts
+Make sure you have sufficient ETH to deploy a smart contract. Perhaps you should have 0.5 ETH at maximum.
+
+### Pre requirements
+
+1. Install metamask extension in your chrome browser
+
+2. Deposit sufficient amount of ethereum to deploy a smart contract
+
+3. Open your chrome web browser and nagivate to https://remix.ethereum.org/
+
+You will see following screen:
+
+<img width="889" alt="image" src="https://user-images.githubusercontent.com/21962762/200037173-9423401f-7063-4657-86c9-936abaa77179.png">
+
 npx eslint '**/*.{js,ts}'
-npx eslint '**/*.{js,ts}' --fix
-npx prettier '**/*.{json,sol,md}' --check
-npx prettier '**/*.{json,sol,md}' --write
-npx solhint 'contracts/**/*.sol'
-npx solhint 'contracts/**/*.sol' --fix
-```
 
-# Etherscan verification
+### Compile the smart contract
 
-To try out Etherscan verification, you first need to deploy a contract to an Ethereum network that's supported by Etherscan, such as Ropsten.
+- Create a new file named as CryptoKiddes.sol in contracts directory
 
-In this project, copy the .env.example file to a file named .env, and then edit it to fill in the details. Enter your Etherscan API key, your Ropsten node URL (eg from Alchemy), and the private key of the account which will send the deployment transaction. With a valid .env file in place, first deploy your contract:
+<img width="409" alt="image" src="https://user-images.githubusercontent.com/21962762/200037698-a592e7b1-d1e0-4f5a-bf0e-07fa184d65d9.png">
 
-```shell
-hardhat run --network ropsten scripts/deploy.ts
-```
+npx eslint '**/*.{js,ts}'
 
-Then, copy the deployment address and paste it in to replace `DEPLOYED_CONTRACT_ADDRESS` in this command:
+- Copy the contract source code and paste it into the editor opened.
 
-```shell
-npx hardhat verify --network ropsten DEPLOYED_CONTRACT_ADDRESS "Hello, Hardhat!"
-```
+<img width="718" alt="image" src="https://user-images.githubusercontent.com/21962762/200037995-076d2244-f2f6-4142-a9c9-d7ccf369296f.png">
 
-# Performance optimizations
+npx eslint '**/*.{js,ts}'
 
-For faster runs of your tests and scripts, consider skipping ts-node's type checking by setting the environment variable `TS_NODE_TRANSPILE_ONLY` to `1` in hardhat's environment. For more details see [the documentation](https://hardhat.org/guides/typescript.html#performance-optimizations).
