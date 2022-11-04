@@ -4,11 +4,11 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 ## deployment in your local
 ### Download source code in your PC.
 
-1. You will be able to use git command below:
+#### 1. You will be able to use git command below:
 
 `git clone https://github.com/jtlandy/bawc.git`
 
-2. Go to web in the project directory, create .env file like below:
+#### 2. Go to web in the project directory, create .env file like below:
 
 ```
 #General Environment
@@ -24,10 +24,10 @@ NEXT_PUBLIC_EMAIL=replace_smtp_email
 NEXT_PUBLIC_PASSWORD=replace_smtp_password
 ```
 
-3. Run `yarn install` or `npm install`
+#### 3. Run `yarn install` or `npm install`
 
 
-4. You can run the app in the development mode.
+#### 4. You can run the app in the development mode.
 
 Use one of following commands:
 
