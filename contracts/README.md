@@ -59,7 +59,8 @@ In order to deploy it on mainnet, your metamask should point to mainnet activate
 
 - Select the smart contract in the dropdown and click yellow button 'Deploy'
 
-<img width="515" alt="image" src="https://user-images.githubusercontent.com/21962762/200040607-36823f1d-8b46-44bb-999b-06eacca5c2b2.png">
+<img width="513" alt="image" src="https://user-images.githubusercontent.com/21962762/200047112-90787283-9757-4c56-be0a-df264f59f801.png">
+
 
 Then the contract will be deployed by interacting with metamask and deployment fee will be deducted from your wallet balance.
 
