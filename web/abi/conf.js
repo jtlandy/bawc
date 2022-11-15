@@ -3,7 +3,7 @@ export const networks = {
       "name": "Ethereum Mainnet",
       "BAYC": "0xbc4ca0eda7647a8ab7c2061c2e118a18a936f13d",
       "MAYC": "0x60e4d786628fea6478f785a6d7e704777c86a7c6",
-      "MINT": "",
+      "MINT": "0xFcd4cC8b9E924282207F244Cd76af04F49620962",
     },
     '4': {
       "name": "Rinkeby Testnet",
